@@ -5,34 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pequeños Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div>Pequeños Sabores</div>
+        <div class="logo"><img src="img/logo-bebe.png" alt="logo"></div>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="etapas.html">Etapas</a>
+            <a class="active" href="index.html">Inicio</a>
+            <a href="etapas.html">Etapas y Recetas</a>
             <a href="contacto.html">Contacto</a>
+            <img src="img/busqueda.svg" alt="Busqueda">
         </nav>
-
+        <div class="etiqueta">
+            <div class="etiqueta-icono"><img src="img/hoja-etiqueta.svg" alt="Etiqueta"></div>
+            <div class="etiqueta-texto">
+                <span>Alimentación saludable</span>
+                <span>desde el primer bocado</span>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
         <img src="img/hero-bebe.png" alt="hero-bebe">
         <div class="hero-content">
-            <span>UNA GUIA PARA CADA ETAPA</span>
-            <h1>Descubri una alimentacion a medida para tu bebe</h1>
-            <p>Informacion, recetas y consejos para acompañar cada etapa de su crecimiento de forma saludable, segura y deliciosa.</p>
-            <a href="etapas.html" class="btn" alt="Explora las etapas →">Explorar Etapas</a>
+            <span class="hero-subtitulo">UNA GUIA PARA CADA ETAPA</span>
+            <h1>Descubri una
+                <span>alimentacion a medida</span>
+                para tu bebe
+            </h1>
+            <p>Informacion, recetas y consejos para acompañar cada etapa de su crecimiento de forma saludable, segura y
+                deliciosa.</p>
+            <a href="etapas.html" class="btn">Explora las etapas →</a>
         </div>
 
-        <div class="prev"></div>
-        <div class="next"></div>
+        <button class="prev"><img src="img/flecha-simple-izquierda.svg" alt="Anterior"></button>
+        <button class="next"><img src="img/flecha-simple-derecha.svg" alt="Siguiente"></button>
 
-        <div class="dot"></div>
-
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
     </section>
 </body>
 

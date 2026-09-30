@@ -1,4 +1,7 @@
-/* Estilos para la página Pequeños Sabores */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #fff9f3;
     font-family: Lato, sans-serif;
@@ -13,17 +16,29 @@ h1 {
 
 header {
     background-color: #fff9f3;
-    padding: 1rem;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-content: center;
     flex-direction: row;
-    }
+}
 
+.logo img {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+    
 nav {
+    font-family: lato, sans-serif;
+    font-weight: 600;
+    display: flex;
     align-items: center;
     color: #293a36;
-    gap: 1rem;
+    gap: 1.3rem;
+    transition: transform 0.5s ease;
+
 }
 
 nav a {
@@ -31,8 +46,46 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+nav a.active {
     color: #e7797d;
+    background-color: rgba(231, 121, 125, 0.199);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+
+nav a:hover {
+    transform: scale(1.05);
+}
+
+nav img {
+    width: 24px;
+    height: 24px;
+}
+
+.etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(123, 151, 124, 0.281);
+    border-radius: 20px;
+    padding: 8px 14px;
+}
+
+.etiqueta-icono img {
+    height: 30px;
+    margin-left: -6px
+}
+
+.etiqueta-texto span {
+    display: block;
+}
+
+.etiqueta-texto {
+    font-size: 14px;
+    color: #293a36;
+    font-weight: 600;
+    
 }
 
 .hero {
@@ -48,19 +101,130 @@ nav a:hover {
     object-fit: cover;
     left: 0;
     top: 0;
-    z-index: 0;
+    z-index: 1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.185) 0%,
+        rgb(255, 255, 255) 20%,
+        rgba(255, 255, 255, 0.541) 35%,
+        rgba(255, 255, 255, 0) 70%
+    );
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    width: 45%;
+    width: 55%;
     padding: 80px;
-    background-color: rgb( rgba(248, 247, 247, 0.644));
 }
 
-.hero-eyebrow {
+.hero-subtitulo {
     font-size: 14px;
     letter-spacing: 2px;
     font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #293a36;
+    max-width: 100%;
+    margin-bottom: 24px;
+    
+}
+
+.hero h1 span {
+    display: block;
+    color: #e7797d;
+}
+
+.hero-content p {
+    font-family: lato, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2e3634;
+    margin-bottom: 24px;
+    max-width: 500px;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e7797d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #ca6267;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.hero .prev,
+.hero .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(41, 58, 54, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hero .prev {
+    left: 16px;
+    
+}
+
+.hero .next {
+    right: 16px;
+}
+
+.hero .prev img,
+.hero .next img {
+    width: 30px;
+    height: 30px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(41, 58, 54, 0.1);
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.dot.active {
+    background-color: rgba(45, 54, 52, 0.664);
+    width: 12px;
+    height: 12px;
+    transform: translateY(-2px);
 }

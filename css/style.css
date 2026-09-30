@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     align-content: center;
     flex-direction: row;
+    gap: 24px;
 }
 
 .logo img {
@@ -111,7 +112,8 @@ nav img {
     z-index: 1;
     background: linear-gradient(
         to right,
-        rgba(255, 255, 255, 0.185) 0%,
+        rgba(255, 255, 255, 0.486) 0%,
+        rgba(255, 255, 255, 0.774) 10%,
         rgb(255, 255, 255) 20%,
         rgba(255, 255, 255, 0.541) 35%,
         rgba(255, 255, 255, 0) 70%
@@ -122,7 +124,7 @@ nav img {
     position: relative;
     z-index: 2;
     width: 55%;
-    padding: 80px;
+    padding: 50px 50px 75px 75px ;
 }
 
 .hero-subtitulo {
@@ -228,3 +230,40 @@ nav img {
     height: 12px;
     transform: translateY(-2px);
 }
+
+.decoracion img {
+    position: absolute;  
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+img.corazon-rosa {
+    top: 16px;
+    left: 16px;
+    rotate: -10deg;
+}
+
+img.linea-con-corazon {
+    top: 70px;
+    right: 16px;
+    width: 80px;
+}
+
+img.hoja1 {
+    top: 220px;
+    left: 365px;
+    width: 80px;
+    height: 80px;
+}
+

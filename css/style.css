@@ -267,3 +267,82 @@ img.hoja1 {
     height: 80px;
 }
 
+/*seccion caracteristicas generales ----*/
+
+/* --- SECCIÓN HERO MIDDLE (PILARES) --- */
+.hero-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 60px;
+    background-color: #fff9f3;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-middle-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.hero-middle-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hero-middle-icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+/* Colores de fondo circulares */
+.green-bg {
+    background-color: #dbe8d8;
+}
+
+.pink-bg {
+    background-color: #fce1e2;
+}
+
+.red-bg {
+    background-color: #fde2e4;
+}
+
+.yellow-bg {
+    background-color: #fef0cd;
+}
+
+.hero-middle-text h3 {
+    margin: 0 0 4px 0;
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #293a36;
+}
+
+.hero-middle-text p {
+    margin: 0;
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    color: #5c6966;
+    line-height: 1.3;
+}
+
+/* Media query para adaptar en celulares */
+@media (max-width: 768px) {
+    .hero-middle {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 24px;
+        gap: 20px;
+    }
+}

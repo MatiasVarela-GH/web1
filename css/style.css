@@ -346,3 +346,177 @@ img.hoja1 {
         gap: 20px;
     }
 }
+
+/* --- SECCIÓN EXPLORÁ LAS ETAPAS --- */
+.etapas-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    background-color: #fff9f3;
+}
+
+.etapas-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.etapas-titulo-icono {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.etapas-header h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 8px 0;
+}
+
+.etapas-header p {
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #5c6966;
+    margin: 0;
+}
+
+/* Grilla de 4 columnas con Flexbox */
+.etapas-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.etapa-card {
+    flex: 1;
+    min-width: 240px;
+    border-radius: 20px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etapa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Colores de fondo de cada tarjeta */
+.green-card {
+    background-color: #e5f0e3;
+}
+
+.pink-card {
+    background-color: #fae1e2;
+}
+
+.yellow-card {
+    background-color: #fef0cd;
+}
+
+.blue-card {
+    background-color: #e3edf4;
+}
+
+/* Etiqueta /  de meses */
+.etapa-badge {
+    align-self: flex-start;
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: Nunito, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #293a36;
+    margin-bottom: 14px;
+}
+
+.etapa-card h3 {
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 8px 0;
+}
+
+.etapa-card p {
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    color: #4a5753;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.etapa-imagen {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.etapa-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Botón circular de flecha */
+.etapa-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    align-self: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.etapa-btn:hover {
+    transform: scale(1.1);
+}
+
+.green-btn {
+    background-color: #588157;
+    color: #ffffff;
+}
+
+.pink-btn {
+    background-color: #e7797d;
+    color: #ffffff;
+}
+
+.yellow-btn {
+    background-color: #dda15e;
+    color: #ffffff;
+}
+
+.blue-btn {
+    background-color: #457b9d;
+    color: #ffffff;
+}
+
+/* Adaptación para pantallas pequeñas (Tablets y Celulares) */
+@media (max-width: 1024px) {
+    .etapa-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .etapa-card {
+        flex: 1 1 100%;
+    }
+}

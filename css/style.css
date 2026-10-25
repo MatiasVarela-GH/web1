@@ -524,6 +524,175 @@ img.hoja1 {
         flex: 1 1 100%;
     }
 }
+/* --- SECCIÓN RECETAS DESTACADAS --- */
+.recetas-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    background-color: #fff9f3;
+}
+
+.recetas-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.recetas-titulo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.recetas-titulo-icono {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.recetas-header-container h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 4px 0;
+}
+
+.recetas-header-container p {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    color: #5c6966;
+    margin: 0;
+}
+
+/* Botón "Ver todas las recetas" */
+.btn-ver-todas {
+    display: inline-block;
+    border: 2px solid #e7797d;
+    color: #e7797d;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ver-todas:hover {
+    background-color: #e7797d;
+    color: #ffffff;
+    transform: scale(1.03);
+}
+
+/* Grilla de 4 columnas con Flexbox */
+.recetas-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.receta-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.receta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.receta-imagen {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background-color: #f7f3ed;
+}
+
+.receta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botón de favorito circular en la esquina superior derecha */
+.receta-fav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.receta-fav:hover {
+    transform: scale(1.1);
+}
+
+.receta-fav img {
+    width: 16px;
+    height: 16px;
+}
+
+.receta-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.receta-content h3 {
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #293a36;
+    margin: 0 0 12px 0;
+}
+
+.receta-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-size: 11px;
+    color: #6b7c76;
+    border-top: 1px solid #f4efe9;
+    padding-top: 10px;
+}
+
+/* Adaptación para tablets y celulares */
+@media (max-width: 1024px) {
+    .receta-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .receta-card {
+        flex: 1 1 100%;
+    }
+}
 .hero-etapas {
     position: relative;
     height: 680px;

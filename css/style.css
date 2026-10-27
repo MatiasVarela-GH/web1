@@ -693,6 +693,175 @@ img.hoja1 {
         flex: 1 1 100%;
     }
 }
+
+/* --- SECCIÓN FOOTER --- */
+.site-footer {
+    background-color: #fff9f3;
+    border-top: 1px solid #f4efe9;
+    padding: 30px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Columna 1: Brand / Logo */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espacio cómodo entre el bebé y la leyenda */
+}
+
+.footer-logo {
+    width: 55px;  /* Aumentado para que resalte como en la captura */
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-brand-text h3 {
+    font-family: Nunito, sans-serif;
+    font-size: 18px; /* Tamaño del título "Pequeños Sabores" */
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 4px 0;
+    line-height: 1.1;
+}
+
+.footer-brand-text p {
+    font-family: Lato, sans-serif;
+    font-size: 13px; /* Tamaño de la bajada */
+    color: #5c6966;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap; /* Mantiene la leyenda en una sola línea si hay espacio */
+}
+
+/* Columna 2: Navegación */
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-nav a {
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #293a36;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #e7797d;
+}
+
+.footer-nav .separator {
+    color: #c4d1cd;
+    font-size: 12px;
+}
+
+/* Columna 3: Botones de Redes Sociales */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #293a36;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: #e7797d;
+    transform: scale(1.1);
+}
+
+/* Columna 4: Eslogan */
+.footer-slogan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-leaf-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.slogan-text span {
+    display: block;
+    font-family: Lato, sans-serif;
+    font-size: 11px;
+    color: #5c6966;
+    line-height: 1.2;
+}
+
+/* Decoraciones en las esquinas inferiores */
+.footer-deco-left,
+.footer-deco-right {
+    position: absolute;
+    bottom: -10px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.footer-deco-left {
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+.footer-deco-right {
+    right: 10px;
+    transform: rotate(30deg) scaleX(-1);
+}
+
+/* Responsivo para celulares */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-brand {
+        flex-direction: column;
+    }
+    
+    .footer-slogan {
+        justify-content: center;
+    }
+}
 .hero-etapas {
     position: relative;
     height: 680px;

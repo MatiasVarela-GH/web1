@@ -846,7 +846,7 @@ img.hoja1 {
     transform: rotate(30deg) scaleX(-1);
 }
 
-/* Responsivo para celulares */
+/* Responsivo para celulares/footer */
 @media (max-width: 900px) {
     .footer-container {
         flex-direction: column;
@@ -862,6 +862,136 @@ img.hoja1 {
         justify-content: center;
     }
 }
+    /* --- SECCIÓN CONTACTO --- */
+.contacto-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 24px;
+    background-color: #fff9f3;
+}
+
+.contacto-container {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contacto-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.contacto-icono {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.contacto-header h1 {
+    font-family: Nunito, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 12px 0;
+}
+
+.contacto-header h1 span {
+    color: #e7797d;
+}
+
+.contacto-header p {
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #5c6966;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Estilos del Formulario */
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #293a36;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #f0eae1;
+    border-radius: 12px;
+    background-color: #fcf9f5;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #293a36;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e7797d;
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Botón de envío/ igual a los botones principales */
+.btn-enviar {
+    align-self: flex-start;
+    background-color: #e7797d;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #ca6267;
+    transform: scale(1.03);
+}
+
+/* Adaptabilidad para dispositivos móviles/contactos */
+@media (max-width: 768px) {
+    .contacto-container {
+        padding: 24px;
+    }
+    
+    .contacto-header h1 {
+        font-size: 26px;
+    }
+    
+    .btn-enviar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Paginas Etapas*/
 .hero-etapas {
     position: relative;
     height: 680px;

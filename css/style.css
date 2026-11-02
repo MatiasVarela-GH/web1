@@ -352,8 +352,726 @@ img.hoja1 {
     }
 }
 
+
 /* Hero etapas */
 
+/* Etapas Listados*/
+
+.etapas-listado {
+    position: relative;
+    display: flex;
+}
+
+.etapas-encabezado {
+    
+}
+
+.etapas-encabezado h2 {
+    font-size: 24px;
+}
+
+.etapas-encabezado img {
+    height: 40px;
+    width: 40px;
+    right: 20%;
+    position: absolute;
+}
+
+.etapas-encabezado p {
+    position: absolute;
+    right: 5%;
+    width: 22%;
+}
+
+
+.etapas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+.etapas-grid article {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex: 250px;
+    min-width: 220px;
+    overflow: hidden;
+    padding: 12px 12px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.etapas-grid article img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.contenido-tarjetas{
+    position: relative;
+    z-index: 2;
+    width: 45%;
+}
+
+.contenido-tarjetas h3{
+    font-family: Lato;
+    font-size: 18px;
+    color: #293a36;
+    font-weight: 600px;
+}
+
+.contenido-tarjetas p{
+    font-size: 12px;
+}
+
+/* --- SECCIÓN EXPLORÁ LAS ETAPAS --- */
+.etapas-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    background-color: #fff9f3;
+}
+
+.etapas-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.etapas-titulo-icono {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.etapas-header h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 8px 0;
+}
+
+.etapas-header p {
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #5c6966;
+    margin: 0;
+}
+
+/* Grilla de 4 columnas con Flexbox */
+.etapas-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.etapa-card {
+    flex: 1;
+    min-width: 240px;
+    border-radius: 20px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etapa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Colores de fondo de cada tarjeta */
+.green-card {
+    background-color: #e5f0e3;
+}
+
+.pink-card {
+    background-color: #fae1e2;
+}
+
+.yellow-card {
+    background-color: #fef0cd;
+}
+
+.blue-card {
+    background-color: #e3edf4;
+}
+
+/* Etiqueta /  de meses */
+.etapa-badge {
+    align-self: flex-start;
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: Nunito, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #293a36;
+    margin-bottom: 14px;
+}
+
+.etapa-card h3 {
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 8px 0;
+}
+
+.etapa-card p {
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    color: #4a5753;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.etapa-imagen {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.etapa-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Botón circular de flecha */
+.etapa-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    align-self: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.etapa-btn:hover {
+    transform: scale(1.1);
+}
+
+.green-btn {
+    background-color: #588157;
+    color: #ffffff;
+}
+
+.pink-btn {
+    background-color: #e7797d;
+    color: #ffffff;
+}
+
+.yellow-btn {
+    background-color: #dda15e;
+    color: #ffffff;
+}
+
+.blue-btn {
+    background-color: #457b9d;
+    color: #ffffff;
+}
+
+/* Adaptación para pantallas pequeñas (Tablets y Celulares) */
+@media (max-width: 1024px) {
+    .etapa-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .etapa-card {
+        flex: 1 1 100%;
+    }
+}
+/* --- SECCIÓN RECETAS DESTACADAS --- */
+.recetas-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    background-color: #fff9f3;
+}
+
+.recetas-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.recetas-titulo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.recetas-titulo-icono {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.recetas-header-container h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 4px 0;
+}
+
+.recetas-header-container p {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    color: #5c6966;
+    margin: 0;
+}
+
+/* Botón "Ver todas las recetas" */
+.btn-ver-todas {
+    display: inline-block;
+    border: 2px solid #e7797d;
+    color: #e7797d;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ver-todas:hover {
+    background-color: #e7797d;
+    color: #ffffff;
+    transform: scale(1.03);
+}
+
+/* Grilla de 4 columnas con Flexbox */
+.recetas-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.receta-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.receta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.receta-imagen {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background-color: #f7f3ed;
+}
+
+.receta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botón de favorito circular en la esquina superior derecha */
+.receta-fav {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.receta-fav:hover {
+    transform: scale(1.1);
+}
+
+.receta-fav img {
+    width: 16px;
+    height: 16px;
+}
+
+.receta-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.receta-content h3 {
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #293a36;
+    margin: 0 0 12px 0;
+}
+
+.receta-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-size: 11px;
+    color: #6b7c76;
+    border-top: 1px solid #f4efe9;
+    padding-top: 10px;
+}
+
+/* Adaptación para tablets y celulares */
+@media (max-width: 1024px) {
+    .receta-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .receta-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* --- SECCIÓN FOOTER --- */
+.site-footer {
+    background-color: #fff9f3;
+    border-top: 1px solid #f4efe9;
+    padding: 30px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Columna 1: Brand / Logo */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espacio cómodo entre el bebé y la leyenda */
+}
+
+.footer-logo {
+    width: 55px;  /* Aumentado para que resalte como en la captura */
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-brand-text h3 {
+    font-family: Nunito, sans-serif;
+    font-size: 18px; /* Tamaño del título "Pequeños Sabores" */
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 4px 0;
+    line-height: 1.1;
+}
+
+.footer-brand-text p {
+    font-family: Lato, sans-serif;
+    font-size: 13px; /* Tamaño de la bajada */
+    color: #5c6966;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap; /* Mantiene la leyenda en una sola línea si hay espacio */
+}
+
+/* Columna 2: Navegación */
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-nav a {
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #293a36;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #e7797d;
+}
+
+.footer-nav .separator {
+    color: #c4d1cd;
+    font-size: 12px;
+}
+
+/* Columna 3: Botones de Redes Sociales */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #293a36;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: #e7797d;
+    transform: scale(1.1);
+}
+
+/* Columna 4: Eslogan */
+.footer-slogan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-leaf-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.slogan-text span {
+    display: block;
+    font-family: Lato, sans-serif;
+    font-size: 11px;
+    color: #5c6966;
+    line-height: 1.2;
+}
+
+/* Decoraciones en las esquinas inferiores */
+.footer-deco-left,
+.footer-deco-right {
+    position: absolute;
+    bottom: -10px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.footer-deco-left {
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+.footer-deco-right {
+    right: 10px;
+    transform: rotate(30deg) scaleX(-1);
+}
+
+/* Responsivo para celulares/footer */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-brand {
+        flex-direction: column;
+    }
+    
+    .footer-slogan {
+        justify-content: center;
+    }
+}
+    /* --- SECCIÓN CONTACTO --- */
+.contacto-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 24px;
+    background-color: #fff9f3;
+}
+
+.contacto-container {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contacto-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.contacto-icono {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.contacto-header h1 {
+    font-family: Nunito, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #293a36;
+    margin: 0 0 12px 0;
+}
+
+.contacto-header h1 span {
+    color: #e7797d;
+}
+
+.contacto-header p {
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #5c6966;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Estilos del Formulario */
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #293a36;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #f0eae1;
+    border-radius: 12px;
+    background-color: #fcf9f5;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    color: #293a36;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e7797d;
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Botón de envío/ igual a los botones principales */
+.btn-enviar {
+    align-self: flex-start;
+    background-color: #e7797d;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #ca6267;
+    transform: scale(1.03);
+}
+
+/* Adaptabilidad para dispositivos móviles/contactos */
+@media (max-width: 768px) {
+    .contacto-container {
+        padding: 24px;
+    }
+    
+    .contacto-header h1 {
+        font-size: 26px;
+    }
+    
+    .btn-enviar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Paginas Etapas*/
 .hero-etapas {
     position: relative;
     height: 680px;
@@ -449,77 +1167,4 @@ img.hoja1 {
 .etiqueta-etapas:hover {
     transform: scale(1.05);
 }
-
-/* Etapas Listados*/
-
-.etapas-listado {
-    position: relative;
-    display: flex;
-}
-
-.etapas-encabezado {}
-
-.etapas-encabezado h2 {
-    font-size: 24px;
-}
-
-.etapas-encabezado img {
-    height: 40px;
-    width: 40px;
-    right: 20%;
-    position: absolute;
-}
-
-.etapas-encabezado p {
-    position: absolute;
-    right: 5%;
-    width: 22%;
-}
-
-
-.etapas-grid {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-
-.etapas-grid article {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    flex: 250px;
-    min-width: 220px;
-    overflow: hidden;
-    padding: 12px 12px;
-    border-radius: 20px;
-    z-index: 1;
-}
-
-.etapas-grid article img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    z-index: 0;
-}
-
-.contenido-tarjetas{
-    position: relative;
-    z-index: 2;
-    width: 45%;
-}
-
-.contenido-tarjetas h3{
-    font-family: Lato;
-    font-size: 18px;
-    color: #293a36;
-    font-weight: 600px;
-}
-
-.contenido-tarjetas p{
-    font-size: 12px;
-}
+    

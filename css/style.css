@@ -30,7 +30,7 @@ header {
     height: 50px;
 }
 
-    
+
 nav {
     font-family: lato, sans-serif;
     font-weight: 600;
@@ -86,7 +86,7 @@ nav img {
     font-size: 14px;
     color: #293a36;
     font-weight: 600;
-    
+
 }
 
 .hero {
@@ -95,7 +95,7 @@ nav img {
     overflow: hidden;
 }
 
-.hero > img {
+.hero>img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -110,21 +110,19 @@ nav img {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.486) 0%,
-        rgba(255, 255, 255, 0.774) 10%,
-        rgb(255, 255, 255) 20%,
-        rgba(255, 255, 255, 0.541) 35%,
-        rgba(255, 255, 255, 0) 70%
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.486) 0%,
+            rgba(255, 255, 255, 0.774) 10%,
+            rgb(255, 255, 255) 20%,
+            rgba(255, 255, 255, 0.541) 35%,
+            rgba(255, 255, 255, 0) 70%);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     width: 55%;
-    padding: 70px 50px 75px 125px ;
+    padding: 70px 50px 75px 125px;
 }
 
 .hero-subtitulo {
@@ -140,7 +138,7 @@ nav img {
     color: #293a36;
     max-width: 100%;
     margin-bottom: 24px;
-    
+
 }
 
 .hero h1 span {
@@ -195,7 +193,7 @@ nav img {
 
 .hero .prev {
     left: 16px;
-    
+
 }
 
 .hero .next {
@@ -236,7 +234,7 @@ nav img {
 }
 
 .decoracion img {
-    position: absolute;  
+    position: absolute;
     width: 50px;
     height: 50px;
     z-index: 3;
@@ -244,9 +242,12 @@ nav img {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -351,6 +352,8 @@ img.hoja1 {
     }
 }
 
+/* Hero etapas */
+
 .hero-etapas {
     position: relative;
     height: 680px;
@@ -372,14 +375,12 @@ img.hoja1 {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.486) 0%,
-        rgba(255, 255, 255, 0.774) 10%,
-        rgb(255, 255, 255) 20%,
-        rgba(255, 255, 255, 0.541) 35%,
-        rgba(255, 255, 255, 0) 70%
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.486) 0%,
+            rgba(255, 255, 255, 0.774) 10%,
+            rgb(255, 255, 255) 20%,
+            rgba(255, 255, 255, 0.541) 35%,
+            rgba(255, 255, 255, 0) 70%);
 }
 
 .hero-etapas-content {
@@ -402,7 +403,7 @@ img.hoja1 {
     color: #293a36;
     max-width: 100%;
     margin-bottom: 24px;
-    
+
 }
 
 .hero-etapas h1 span {
@@ -419,6 +420,8 @@ img.hoja1 {
     max-width: 500px;
     font-weight: 400;
 }
+
+/* Etiquetas Etapas */
 
 .etiqueta-etapas span {
     display: block;
@@ -446,4 +449,77 @@ img.hoja1 {
 .etiqueta-etapas:hover {
     transform: scale(1.05);
 }
-    
+
+/* Etapas Listados*/
+
+.etapas-listado {
+    position: relative;
+    display: flex;
+}
+
+.etapas-encabezado {}
+
+.etapas-encabezado h2 {
+    font-size: 24px;
+}
+
+.etapas-encabezado img {
+    height: 40px;
+    width: 40px;
+    right: 20%;
+    position: absolute;
+}
+
+.etapas-encabezado p {
+    position: absolute;
+    right: 5%;
+    width: 22%;
+}
+
+
+.etapas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+.etapas-grid article {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex: 250px;
+    min-width: 220px;
+    overflow: hidden;
+    padding: 12px 12px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.etapas-grid article img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.contenido-tarjetas{
+    position: relative;
+    z-index: 2;
+    width: 45%;
+}
+
+.contenido-tarjetas h3{
+    font-family: Lato;
+    font-size: 18px;
+    color: #293a36;
+    font-weight: 600px;
+}
+
+.contenido-tarjetas p{
+    font-size: 12px;
+}

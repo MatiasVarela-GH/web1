@@ -1,65 +1,64 @@
+/* ESTILOS GENERALES */
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #fff9f3;
-    font-family: Lato, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fff9f3;
+    font-family: Lato, sans-serif;
+    color: #293a36;
 }
 
-h1 {
-    color: #293a36;
+h1,
+h2,
+h3 {
     font-family: Nunito, sans-serif;
 }
 
+/* ENCABEZADO Y NAVEGACION */
 header {
-    background-color: #fff9f3;
-    padding: 12px 24px;
     display: flex;
-    justify-content: space-between;
-    align-content: center;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: 24px;
+    padding: 12px 24px;
+    background-color: #fff9f3;
 }
 
 .logo img {
-    display: flex;
-    align-items: center;
+    display: block;
     height: 50px;
 }
 
-    
-nav {
-    font-family: lato, sans-serif;
-    font-weight: 600;
+header nav {
     display: flex;
     align-items: center;
-    color: #293a36;
     gap: 1.3rem;
-    transition: transform 0.5s ease;
-
+    font-family: Lato, sans-serif;
+    font-weight: 600;
 }
 
-nav a {
+header nav a {
     color: #293a36;
     text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-nav a.active {
-    color: #e7797d;
-    background-color: rgba(231, 121, 125, 0.199);
-    border-radius: 8px;
+header nav a.active {
     padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgba(231, 121, 125, 0.2);
+    color: #e7797d;
 }
 
-
-nav a:hover {
+header nav a:hover {
     transform: scale(1.05);
 }
 
-nav img {
+header nav img {
     width: 24px;
     height: 24px;
 }
@@ -68,27 +67,28 @@ nav img {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(123, 151, 124, 0.281);
-    border-radius: 20px;
     padding: 8px 14px;
+    border-radius: 20px;
+    background-color: rgba(123, 151, 124, 0.28);
 }
 
 .etiqueta-icono img {
+    display: block;
     height: 30px;
-    margin-left: -6px
+    margin-left: -6px;
+}
+
+.etiqueta-texto {
+    color: #293a36;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .etiqueta-texto span {
     display: block;
 }
 
-.etiqueta-texto {
-    font-size: 14px;
-    color: #293a36;
-    font-weight: 600;
-    
-}
-
+/* PORTADA DE INICIO */
 .hero {
     position: relative;
     height: 520px;
@@ -97,105 +97,102 @@ nav img {
 
 .hero > img {
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    left: 0;
-    top: 0;
-    z-index: 1;
 }
 
 .hero::after {
-    content: "";
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.486) 0%,
-        rgba(255, 255, 255, 0.774) 10%,
-        rgb(255, 255, 255) 20%,
-        rgba(255, 255, 255, 0.541) 35%,
-        rgba(255, 255, 255, 0) 70%
-    );
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.486) 0%,
+            rgba(255, 255, 255, 0.774) 10%,
+            #ffffff 20%,
+            rgba(255, 255, 255, 0.541) 35%,
+            rgba(255, 255, 255, 0) 70%);
+    content: "";
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     width: 55%;
-    padding: 70px 50px 75px 125px ;
+    padding: 70px 50px 75px 125px;
 }
 
 .hero-subtitulo {
     font-size: 14px;
-    letter-spacing: 2px;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.hero h1 {
+.hero h1,
+.hero-etapas h1 {
+    max-width: 100%;
+    margin-bottom: 24px;
+    color: #293a36;
     font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
-    color: #293a36;
-    max-width: 100%;
-    margin-bottom: 24px;
-    
 }
 
-.hero h1 span {
+.hero h1 span,
+.hero-etapas h1 span {
     display: block;
     color: #e7797d;
 }
 
-.hero-content p {
-    font-family: lato, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #2e3634;
-    margin-bottom: 24px;
+.hero-content p,
+.hero-etapas-content p {
     max-width: 500px;
+    margin-bottom: 24px;
+    color: #2e3634;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 .btn {
     display: inline-block;
-    background-color: #e7797d;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
     padding: 14px 28px;
+    border-radius: 50px;
+    background-color: #e7797d;
+    color: #ffffff;
+    text-decoration: none;
     transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .btn:hover {
-    background-color: #ca6267;
     transform: scale(1.05);
-    cursor: pointer;
+    background-color: #ca6267;
 }
 
-/*Flechas*/
-
+/* FLECHAS Y PUNTOS DEL HERO */
 .hero .prev,
 .hero .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(41, 58, 54, 0.1);
-    border: none;
-    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(41, 58, 54, 0.1);
     cursor: pointer;
-    z-index: 3;
 }
 
 .hero .prev {
     left: 16px;
-    
 }
 
 .hero .next {
@@ -208,45 +205,50 @@ nav img {
     height: 30px;
 }
 
-/*puntos en posicion imagen*/
-
 .dots {
     position: absolute;
     bottom: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 3;
     display: flex;
     gap: 8px;
-    z-index: 3;
+    transform: translateX(-50%);
 }
 
 .dot {
     width: 8px;
     height: 8px;
-    background-color: rgba(41, 58, 54, 0.1);
     border-radius: 50%;
-    margin: 0 4px;
+    background-color: rgba(41, 58, 54, 0.1);
 }
 
 .dot.active {
-    background-color: rgba(45, 54, 52, 0.664);
     width: 12px;
     height: 12px;
     transform: translateY(-2px);
+    background-color: rgba(45, 54, 52, 0.66);
+}
+
+/* DECORACIONES DEL HERO */
+.decoracion {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .decoracion img {
-    position: absolute;  
+    position: absolute;
     width: 50px;
     height: 50px;
-    z-index: 3;
-    animation: float 4.5s ease-in-out infinite;
+    animation: flotar 4.5s ease-in-out infinite;
 }
 
-@keyframes float {
+@keyframes flotar {
     0%, 100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -255,7 +257,7 @@ nav img {
 img.corazon-rosa {
     top: 16px;
     left: 16px;
-    rotate: -10deg;
+    transform: rotate(-10deg);
 }
 
 img.linea-con-corazon {
@@ -271,35 +273,33 @@ img.hoja1 {
     height: 80px;
 }
 
-/*seccion caracteristicas generales ----*/
-
-/* --- SECCIÓN HERO MIDDLE (PILARES) --- */
+/* BENEFICIOS DE LA PAGINA DE INICIO */
 .hero-middle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-    padding: 40px 60px;
-    background-color: #fff9f3;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 60px;
+    background-color: #fff9f3;
 }
 
 .hero-middle-item {
     display: flex;
+    flex: 1;
     align-items: center;
     gap: 16px;
-    flex: 1;
 }
 
 .hero-middle-icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
 }
 
 .hero-middle-icon img {
@@ -308,7 +308,6 @@ img.hoja1 {
     object-fit: contain;
 }
 
-/* Colores de fondo circulares */
 .green-bg {
     background-color: #dbe8d8;
 }
@@ -326,32 +325,88 @@ img.hoja1 {
 }
 
 .hero-middle-text h3 {
-    margin: 0 0 4px 0;
-    font-family: Nunito, sans-serif;
+    margin: 0 0 4px;
+    color: #293a36;
     font-size: 15px;
     font-weight: 700;
-    color: #293a36;
 }
 
 .hero-middle-text p {
     margin: 0;
-    font-family: Lato, sans-serif;
-    font-size: 13px;
     color: #5c6966;
+    font-size: 13px;
     line-height: 1.3;
 }
 
-/* Media query para adaptar en celulares */
-@media (max-width: 768px) {
-    .hero-middle {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px 24px;
-        gap: 20px;
-    }
+/* PORTADA DE LA PAGINA DE ETAPAS */
+.hero-etapas {
+    position: relative;
+    height: 680px;
+    overflow: hidden;
 }
 
-/* --- SECCIÓN EXPLORÁ LAS ETAPAS --- */
+.hero-etapas > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-etapas::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.486) 0%,
+            rgba(255, 255, 255, 0.774) 10%,
+            #ffffff 20%,
+            rgba(255, 255, 255, 0.541) 35%,
+            rgba(255, 255, 255, 0) 70%);
+    content: "";
+}
+
+.hero-etapas-content {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+    padding: 150px 50px 75px 175px;
+}
+
+.hero-etapas-subtitulo {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.etiqueta-etapas {
+    position: absolute;
+    top: 250px;
+    right: 5%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 130px;
+    height: 100px;
+    padding: 15px 16px;
+    border-radius: 40px;
+    background-color: #e4acae;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.5s ease;
+}
+
+.etiqueta-etapas:hover {
+    transform: scale(1.05);
+}
+
+/* TARJETAS DE ETAPAS */
 .etapas-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -360,8 +415,8 @@ img.hoja1 {
 }
 
 .etapas-header {
-    text-align: center;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .etapas-titulo-icono {
@@ -371,36 +426,33 @@ img.hoja1 {
 }
 
 .etapas-header h2 {
-    font-family: Nunito, sans-serif;
+    margin: 0 0 8px;
+    color: #293a36;
     font-size: 32px;
     font-weight: 800;
-    color: #293a36;
-    margin: 0 0 8px 0;
 }
 
 .etapas-header p {
-    font-family: Lato, sans-serif;
-    font-size: 15px;
-    color: #5c6966;
     margin: 0;
+    color: #5c6966;
+    font-size: 15px;
 }
 
-/* Grilla de 4 columnas con Flexbox */
 .etapas-grid {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .etapa-card {
-    flex: 1;
-    min-width: 240px;
-    border-radius: 20px;
-    padding: 24px 20px;
-    display: flex;
-    flex-direction: column;
     position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 240px;
+    padding: 24px 20px;
+    border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -410,7 +462,6 @@ img.hoja1 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Colores de fondo de cada tarjeta */
 .green-card {
     background-color: #e5f0e3;
 }
@@ -427,64 +478,60 @@ img.hoja1 {
     background-color: #e3edf4;
 }
 
-/* Etiqueta /  de meses */
 .etapa-badge {
     align-self: flex-start;
-    background-color: #ffffff;
+    margin-bottom: 14px;
     padding: 6px 14px;
     border-radius: 20px;
+    background-color: #ffffff;
+    color: #293a36;
     font-family: Nunito, sans-serif;
     font-size: 13px;
     font-weight: 700;
-    color: #293a36;
-    margin-bottom: 14px;
 }
 
 .etapa-card h3 {
-    font-family: Nunito, sans-serif;
+    margin: 0 0 8px;
+    color: #293a36;
     font-size: 20px;
     font-weight: 800;
-    color: #293a36;
-    margin: 0 0 8px 0;
 }
 
 .etapa-card p {
-    font-family: Lato, sans-serif;
-    font-size: 13px;
-    color: #4a5753;
-    line-height: 1.4;
-    margin: 0 0 20px 0;
     flex-grow: 1;
+    margin: 0 0 20px;
+    color: #4a5753;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .etapa-imagen {
-    width: 100%;
-    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 140px;
     margin-bottom: 16px;
 }
 
 .etapa-imagen img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
     border-radius: 12px;
+    object-fit: contain;
 }
 
-/* Botón circular de flecha */
 .etapa-btn {
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
     font-size: 16px;
-    align-self: flex-start;
+    font-weight: bold;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
 
@@ -512,19 +559,7 @@ img.hoja1 {
     color: #ffffff;
 }
 
-/* Adaptación para pantallas pequeñas (Tablets y Celulares) */
-@media (max-width: 1024px) {
-    .etapa-card {
-        flex: 1 1 calc(50% - 10px);
-    }
-}
-
-@media (max-width: 600px) {
-    .etapa-card {
-        flex: 1 1 100%;
-    }
-}
-/* --- SECCIÓN RECETAS DESTACADAS --- */
+/* RECETAS */
 .recetas-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -536,9 +571,9 @@ img.hoja1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
     flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 30px;
 }
 
 .recetas-titulo-wrapper {
@@ -554,58 +589,54 @@ img.hoja1 {
 }
 
 .recetas-header-container h2 {
-    font-family: Nunito, sans-serif;
+    margin: 0 0 4px;
+    color: #293a36;
     font-size: 28px;
     font-weight: 800;
-    color: #293a36;
-    margin: 0 0 4px 0;
 }
 
 .recetas-header-container p {
-    font-family: Lato, sans-serif;
-    font-size: 14px;
-    color: #5c6966;
     margin: 0;
+    color: #5c6966;
+    font-size: 14px;
 }
 
-/* Botón "Ver todas las recetas" */
 .btn-ver-todas {
     display: inline-block;
-    border: 2px solid #e7797d;
-    color: #e7797d;
-    background-color: transparent;
-    text-decoration: none;
     padding: 10px 22px;
+    border: 2px solid #e7797d;
     border-radius: 50px;
+    background-color: transparent;
+    color: #e7797d;
     font-family: Nunito, sans-serif;
-    font-weight: 700;
     font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-ver-todas:hover {
+    transform: scale(1.03);
     background-color: #e7797d;
     color: #ffffff;
-    transform: scale(1.03);
 }
 
-/* Grilla de 4 columnas con Flexbox */
 .recetas-grid {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .receta-card {
-    flex: 1;
-    min-width: 250px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     display: flex;
+    flex: 1;
     flex-direction: column;
+    min-width: 250px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -621,27 +652,26 @@ img.hoja1 {
     background-color: #f7f3ed;
 }
 
-.receta-imagen img {
+.receta-imagen > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Botón de favorito circular en la esquina superior derecha */
 .receta-fav {
     position: absolute;
     top: 12px;
     right: 12px;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     transition: transform 0.2s ease;
 }
 
@@ -655,78 +685,62 @@ img.hoja1 {
 }
 
 .receta-content {
-    padding: 16px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
+    padding: 16px;
 }
 
 .receta-content h3 {
-    font-family: Nunito, sans-serif;
+    margin: 0 0 12px;
+    color: #293a36;
     font-size: 16px;
     font-weight: 700;
-    color: #293a36;
-    margin: 0 0 12px 0;
 }
 
 .receta-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Lato, sans-serif;
-    font-size: 11px;
-    color: #6b7c76;
-    border-top: 1px solid #f4efe9;
     padding-top: 10px;
-}
-
-/* Adaptación para tablets y celulares */
-@media (max-width: 1024px) {
-    .receta-card {
-        flex: 1 1 calc(50% - 10px);
-    }
-}
-
-@media (max-width: 600px) {
-    .receta-card {
-        flex: 1 1 100%;
-    }
-}
-
-/* --- SECCIÓN FOOTER --- */
-.site-footer {
-    background-color: #fff9f3;
     border-top: 1px solid #f4efe9;
-    padding: 30px 24px;
+    color: #6b7c76;
+    font-size: 11px;
+}
+
+/* PIE DE PAGINA */
+.site-footer {
     position: relative;
     overflow: hidden;
+    padding: 30px 24px;
+    border-top: 1px solid #f4efe9;
+    background-color: #fff9f3;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Columna 1: Brand / Logo */
 .footer-brand {
     display: flex;
     align-items: center;
-    gap: 16px; /* Espacio cómodo entre el bebé y la leyenda */
+    gap: 16px;
 }
 
 .footer-logo {
-    width: 55px;  /* Aumentado para que resalte como en la captura */
+    flex-shrink: 0;
+    width: 55px;
     height: 55px;
     object-fit: contain;
-    flex-shrink: 0;
 }
 
 .footer-brand-text {
@@ -736,24 +750,21 @@ img.hoja1 {
 }
 
 .footer-brand-text h3 {
-    font-family: Nunito, sans-serif;
-    font-size: 18px; /* Tamaño del título "Pequeños Sabores" */
-    font-weight: 800;
+    margin: 0 0 4px;
     color: #293a36;
-    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 800;
     line-height: 1.1;
 }
 
 .footer-brand-text p {
-    font-family: Lato, sans-serif;
-    font-size: 13px; /* Tamaño de la bajada */
-    color: #5c6966;
     margin: 0;
+    color: #5c6966;
+    font-size: 13px;
     line-height: 1.2;
-    white-space: nowrap; /* Mantiene la leyenda en una sola línea si hay espacio */
+    white-space: nowrap;
 }
 
-/* Columna 2: Navegación */
 .footer-nav {
     display: flex;
     align-items: center;
@@ -761,10 +772,9 @@ img.hoja1 {
 }
 
 .footer-nav a {
-    font-family: Lato, sans-serif;
+    color: #293a36;
     font-size: 13px;
     font-weight: 600;
-    color: #293a36;
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -778,7 +788,6 @@ img.hoja1 {
     font-size: 12px;
 }
 
-/* Columna 3: Botones de Redes Sociales */
 .footer-social {
     display: flex;
     align-items: center;
@@ -786,24 +795,23 @@ img.hoja1 {
 }
 
 .social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
     border-radius: 50%;
     background-color: #293a36;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .social-btn:hover {
-    background-color: #e7797d;
     transform: scale(1.1);
+    background-color: #e7797d;
 }
 
-/* Columna 4: Eslogan */
 .footer-slogan {
     display: flex;
     align-items: center;
@@ -818,21 +826,19 @@ img.hoja1 {
 
 .slogan-text span {
     display: block;
-    font-family: Lato, sans-serif;
-    font-size: 11px;
     color: #5c6966;
+    font-size: 11px;
     line-height: 1.2;
 }
 
-/* Decoraciones en las esquinas inferiores */
 .footer-deco-left,
 .footer-deco-right {
     position: absolute;
     bottom: -10px;
+    z-index: 1;
     width: 50px;
     height: 50px;
     opacity: 0.7;
-    z-index: 1;
     pointer-events: none;
 }
 
@@ -846,23 +852,7 @@ img.hoja1 {
     transform: rotate(30deg) scaleX(-1);
 }
 
-/* Responsivo para celulares/footer */
-@media (max-width: 900px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .footer-brand {
-        flex-direction: column;
-    }
-    
-    .footer-slogan {
-        justify-content: center;
-    }
-}
-    /* --- SECCIÓN CONTACTO --- */
+/* PAGINA DE CONTACTO */
 .contacto-section {
     max-width: 800px;
     margin: 40px auto;
@@ -871,30 +861,29 @@ img.hoja1 {
 }
 
 .contacto-container {
-    background-color: #ffffff;
-    border-radius: 24px;
     padding: 48px;
+    border-radius: 24px;
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .contacto-header {
-    text-align: center;
     margin-bottom: 36px;
+    text-align: center;
 }
 
 .contacto-icono {
     width: 40px;
     height: 40px;
-    object-fit: contain;
     margin-bottom: 12px;
+    object-fit: contain;
 }
 
 .contacto-header h1 {
-    font-family: Nunito, sans-serif;
+    margin: 0 0 12px;
+    color: #293a36;
     font-size: 32px;
     font-weight: 800;
-    color: #293a36;
-    margin: 0 0 12px 0;
 }
 
 .contacto-header h1 span {
@@ -902,14 +891,12 @@ img.hoja1 {
 }
 
 .contacto-header p {
-    font-family: Lato, sans-serif;
-    font-size: 15px;
-    color: #5c6966;
     margin: 0;
+    color: #5c6966;
+    font-size: 15px;
     line-height: 1.5;
 }
 
-/* Estilos del Formulario */
 .contacto-form {
     display: flex;
     flex-direction: column;
@@ -923,10 +910,10 @@ img.hoja1 {
 }
 
 .form-group label {
+    color: #293a36;
     font-family: Nunito, sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #293a36;
 }
 
 .form-group input,
@@ -935,11 +922,11 @@ img.hoja1 {
     padding: 14px 18px;
     border: 2px solid #f0eae1;
     border-radius: 12px;
+    outline: none;
     background-color: #fcf9f5;
+    color: #293a36;
     font-family: Lato, sans-serif;
     font-size: 15px;
-    color: #293a36;
-    outline: none;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -950,141 +937,123 @@ img.hoja1 {
 }
 
 .form-group textarea {
-    resize: vertical;
     min-height: 120px;
+    resize: vertical;
 }
 
-/* Botón de envío/ igual a los botones principales */
 .btn-enviar {
     align-self: flex-start;
-    background-color: #e7797d;
-    color: #ffffff;
+    margin-top: 10px;
+    padding: 14px 32px;
     border: none;
     border-radius: 50px;
-    padding: 14px 32px;
+    background-color: #e7797d;
+    color: #ffffff;
     font-family: Nunito, sans-serif;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 10px;
 }
 
 .btn-enviar:hover {
-    background-color: #ca6267;
     transform: scale(1.03);
+    background-color: #ca6267;
 }
 
-/* Adaptabilidad para dispositivos móviles/contactos */
+/* AJUSTES PARA PANTALLAS MAS PEQUENAS */
+@media (max-width: 1024px) {
+    .etapa-card,
+    .receta-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+    }
+
+    .footer-slogan {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content,
+    .hero-etapas-content {
+        width: 100%;
+        padding: 60px 32px;
+    }
+
+    .hero h1,
+    .hero-etapas h1 {
+        font-size: 36px;
+    }
+
+    .hero-middle {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 24px;
+        gap: 20px;
+    }
+
+    .etapas-section,
+    .recetas-section {
+        padding: 40px 20px;
+    }
+
+    .etapas-grid,
+    .recetas-grid {
+        justify-content: center;
+    }
+
+    .etapa-card,
+    .receta-card {
+        flex: 1 1 100%;
+    }
+
     .contacto-container {
         padding: 24px;
     }
-    
+
     .contacto-header h1 {
         font-size: 26px;
     }
-    
+
     .btn-enviar {
         width: 100%;
         text-align: center;
     }
 }
 
-/* Paginas Etapas*/
-.hero-etapas {
-    position: relative;
-    height: 680px;
-    overflow: hidden;
-}
+@media (max-width: 600px) {
+    .footer-brand-text p {
+        white-space: normal;
+    }
 
-.hero-etapas img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-.hero-etapas::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.486) 0%,
-        rgba(255, 255, 255, 0.774) 10%,
-        rgb(255, 255, 255) 20%,
-        rgba(255, 255, 255, 0.541) 35%,
-        rgba(255, 255, 255, 0) 70%
-    );
+    .recetas-header-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
-
-.hero-etapas-content {
-    position: relative;
-    z-index: 2;
-    width: 33%;
-    padding: 150px 50px 75px 175px;
-}
-
-.hero-etapas-subtitulo {
-    font-size: 14px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.hero-etapas h1 {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #293a36;
-    max-width: 100%;
-    margin-bottom: 24px;
-    
-}
-
-.hero-etapas h1 span {
-    display: block;
-    color: #e7797d;
-}
-
-.hero-etapas-content p {
-    font-family: lato, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #2e3634;
-    margin-bottom: 24px;
-    max-width: 500px;
-    font-weight: 400;
-}
-
-.etiqueta-etapas span {
-    display: block;
-}
-
-.etiqueta-etapas {
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 600;
-    background-color: #e4acae;
-    border-radius: 40px;
-    height: 100px;
-    width: 130px;
-    align-items: center;
-    gap: 8px;
-    padding: 15px 16px;
-    justify-items: center;
-    top: 250px;
-    right: 5%;
-    position: absolute;
-    z-index: 3;
-    transition: transform 0.5s ease;
-}
-
-.etiqueta-etapas:hover {
-    transform: scale(1.05);
-}
-    

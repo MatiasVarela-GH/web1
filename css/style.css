@@ -103,6 +103,7 @@ header nav img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 35%;
 }
 
 .hero::after {
@@ -144,6 +145,10 @@ header nav img {
 .hero h1 span,
 .hero-etapas h1 span {
     display: block;
+    color: #293a36;
+}
+
+.hero h1 #hero-tituloDestacado {
     color: #e7797d;
 }
 
@@ -264,13 +269,6 @@ img.linea-con-corazon {
     top: 70px;
     right: 16px;
     width: 80px;
-}
-
-img.hoja1 {
-    top: 240px;
-    left: 420px;
-    width: 80px;
-    height: 80px;
 }
 
 /* BENEFICIOS DE LA PAGINA DE INICIO */

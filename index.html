@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/carrusel.js" defer></script>
 </head>
 
 <body>
@@ -32,16 +33,18 @@
     </header>
 
     <section class="hero">
-        <img src="img/hero-bebe.png" alt="hero-bebe">
+        <img src="img/hero-bebe.png" alt="hero-bebe" id="hero-imagen">
         <div class="hero-content">
-            <span class="hero-subtitulo">UNA GUIA PARA CADA ETAPA</span>
-            <h1>Descubri una
-                <span>alimentacion a medida</span>
-                para tu bebe
+            <span class="hero-subtitulo" id="hero-subtitulo">UNA GUIA PARA CADA ETAPA</span>
+            <h1>
+                <span id="hero-tituloInicio">Descubrí una</span>
+                <span id="hero-tituloDestacado">alimentación a medida</span>
+                <span id="hero-tituloFinal">para tu bebé</span>
             </h1>
-            <p>Informacion, recetas y consejos para acompañar cada etapa de su crecimiento de forma saludable, segura y
+            <p id="hero-descripcion">Informacion, recetas y consejos para acompañar cada etapa de su crecimiento de
+                forma saludable, segura y
                 deliciosa.</p>
-            <a href="etapas.html" class="btn">Explora las etapas →</a>
+            <a href="etapas.html" class="btn" id="hero-boton">Explora las etapas →</a>
         </div>
 
         <button class="prev"><img src="img/flecha-simple-izquierda.svg" alt="Anterior"></button>
@@ -51,11 +54,11 @@
             <div class="dot active"></div>
             <div class="dot"></div>
             <div class="dot"></div>
+            <div class="dot"></div>
         </div>
 
         <div class="decoracion">
             <img class="corazon-rosa" src="img/corazon rosa.png" alt="corazon-rosa">
-            <img class="hoja1" src="img/hoja1.png" alt="hoja1">
             <img class="linea-con-corazon" src="img/linea con corazon.png" alt="linea con corazon">
         </div>
     </section>

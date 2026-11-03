@@ -80,7 +80,7 @@ function mostrarDiapositiva() {
 })
 }
 
-function siguienteDipositiva() {
+function siguienteDiapositiva() {
     indiceActual++;
 
     if (indiceActual >= diapositivas.length) {
@@ -90,9 +90,9 @@ function siguienteDipositiva() {
     mostrarDiapositiva();
 }
 
-siguiente.addEventListener("click", siguienteDipositiva);
+siguiente.addEventListener("click", siguienteDiapositiva);
 
-function anteriorDipositiva() {
+function anteriorDiapositiva() {
     indiceActual--;
 
     if (indiceActual < 0) {
@@ -102,4 +102,4 @@ function anteriorDipositiva() {
     mostrarDiapositiva();
 }
 
-anterior.addEventListener("click", anteriorDipositiva);
+anterior.addEventListener("click", anteriorDiapositiva);

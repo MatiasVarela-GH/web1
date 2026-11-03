@@ -12,19 +12,33 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/carrusel.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div class="logo"><img src="img/logo-bebe.png" alt="logo"></div>
-        <nav>
+        <div class="logo">
+            <img src="img/logo-bebe.png" alt="Pequeños Sabores">
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="menuPrincipal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menuPrincipal">
             <a class="active" href="index.html">Inicio</a>
             <a href="etapas.html">Etapas y Recetas</a>
             <a href="contacto.html">Contacto</a>
             <img src="img/busqueda.svg" alt="Busqueda">
         </nav>
+
         <div class="etiqueta">
-            <div class="etiqueta-icono"><img src="img/hoja-etiqueta.svg" alt="Etiqueta"></div>
+            <div class="etiqueta-icono">
+                <img src="img/hoja-etiqueta.svg" alt="Etiqueta">
+            </div>
             <div class="etiqueta-texto">
                 <span>Alimentación saludable</span>
                 <span>desde el primer bocado</span>

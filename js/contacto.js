@@ -254,6 +254,8 @@ formulario.addEventListener("submit", function(event) {
 
 function mostrarResumen() {
 
+    resultado.textContent = "";
+
     // Crear los elementos HTML
     const tarjeta = document.createElement("div");
 

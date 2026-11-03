@@ -274,14 +274,21 @@ img.hoja1 {
 }
 
 /* BENEFICIOS DE LA PAGINA DE INICIO */
+
 .hero-middle {
+    text-align: center;
+
+}
+
+.hero-middle-list{
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 60px;
+    padding: 20px 60px;
     background-color: #fff9f3;
 }
 
@@ -336,6 +343,36 @@ img.hoja1 {
     color: #5c6966;
     font-size: 13px;
     line-height: 1.3;
+}
+
+/* PEQUENOS SABORES */
+
+.seccion-info{
+    text-align: center;
+    padding: 50px 8%;
+}
+
+.contenedor-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.ilus-info img{
+   width: 100%;
+   max-width: 450px;
+   height: auto;
+}
+
+.ilus-info{
+    width: 420px;
+}
+
+.info{
+    text-align: left;
+    width: 500px;
+    max-width: 500px;
 }
 
 /* PORTADA DE LA PAGINA DE ETAPAS */

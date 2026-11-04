@@ -7,13 +7,13 @@
 
 El proyecto está dedicado a la alimentación complementaria para bebés. Su objetivo es brindar información sobre las distintas etapas de alimentación, compartir consejos y presentar recetas sencillas para acompañar el crecimiento del bebé.
 
-###Páginas del sitio
+### Páginas del sitio
 
 - Inicio: presentación del proyecto y carrusel de imágenes desarrollado con JavaScript.
 - Etapas y Recetas: información organizada por etapas de alimentación y recetas con ingredientes y preparación.
 - Contacto: formulario con validaciones realizadas mediante JavaScript.
 
-###Tecnologías utilizadas
+### Tecnologías utilizadas
 
 - HTML5
 - CSS3
@@ -22,7 +22,7 @@ El proyecto está dedicado a la alimentación complementaria para bebés. Su obj
 - Git y GitHub
 - GitHub Pages
 
-###Estructura del proyecto
+### Estructura del proyecto
 
 web1/
 - index.html
@@ -37,20 +37,20 @@ web1/
 - img/
 - README.md
 
-###Instrucciones de uso
+### Instrucciones de uso
 
 1. Descargar o clonar el repositorio.
 2. Abrir la carpeta del proyecto.
 3. Ejecutar el archivo index.html en un navegador web.
 4. Utilizar el menú para navegar entre las distintas páginas.
 
-###Sitio publicado
+### Sitio publicado
 Ver Pequeños Sabores en GitHub Pages: https://matiasvarela-gh.github.io/web1/
 
-###Repositorio
+### Repositorio
 GitHub - Pequeños Sabores: https://github.com/MatiasVarela-GH/web1
 
-###Autoría
+### Autoría
 
 Proyecto realizado por:
 
@@ -59,7 +59,7 @@ Proyecto realizado por:
 
 Trabajo Final Integrador - Programación Web 1.
 
-###Recursos externos y atribuciones
+### Recursos externos y atribuciones
 
 Tipografías
 - Google Fonts - Lato: https://fonts.google.com/specimen/Lato

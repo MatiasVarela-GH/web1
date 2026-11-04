@@ -397,8 +397,9 @@ img.linea-con-corazon {
 /* PORTADA DE LA PAGINA DE ETAPAS */
 .hero-etapas {
     position: relative;
-    height: 680px;
+    height: 520px;
     overflow: hidden;
+    background-color: #fff9f3;
 }
 
 .hero-etapas>img {
@@ -409,6 +410,7 @@ img.linea-con-corazon {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 35%;
 }
 
 .hero-etapas::after {
@@ -427,8 +429,8 @@ img.linea-con-corazon {
 .hero-etapas-content {
     position: relative;
     z-index: 2;
-    width: 33%;
-    padding: 150px 50px 75px 175px;
+    width: 55%;
+    padding: 70px 50px 75px 125px;
 }
 
 .hero-etapas h1,
@@ -542,7 +544,7 @@ img.linea-con-corazon {
 }
 
 .pink-card {
-    background-color: #fae1e2;
+    background-color: #fce1e2;
 }
 
 .yellow-card {
@@ -569,6 +571,7 @@ img.linea-con-corazon {
     line-height: 1.5;
 }
 
+
 /* IMAGENES */
 .etapa-imagen {
     position: relative;
@@ -589,6 +592,7 @@ img.linea-con-corazon {
 .etapa-card:hover .etapa-imagen > img {
     transform: scale(1.03);
 }
+
 
 /* BOTONES SOBRE LAS IMAGENES */
 .etapa-btn {

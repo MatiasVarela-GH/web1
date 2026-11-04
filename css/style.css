@@ -637,6 +637,19 @@ img.linea-con-corazon {
 .blue-btn {
     background-color: #457b9d7e;
 }
+/* 1. Desplazamiento suave en toda la página cuando se usan las flechas */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Efecto visual directo cuando la receta es seleccionada mediante la tarjeta de meses precionando las flechas */
+.receta-card:target {
+    transform: scale(1.06); /* Agranda ligeramente la tarjeta seleccionada */
+    box-shadow: 0 0 25px rgba(231, 121, 125, 0.6); /* Agrega un resplandor del color de la marca */
+    border: 3px solid #e7797d; /* Un borde destacado */
+    z-index: 10;
+    transition: all 0.4s ease;
+}
 
 /* RECETAS */
 .recetas-section {
@@ -707,21 +720,92 @@ img.linea-con-corazon {
     gap: 20px;
 }
 
-.receta-card {
+/* --- ESTILOS PARA TARJETAS DE ETAPAS CON DOBLE BOTÓN --- */
+.etapa-botones-dobles {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    min-width: 250px;
-    overflow: hidden;
-    border-radius: 16px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 8px;
 }
 
-.receta-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.btn-secundario {
+    position: static !important;
+}
+
+/* --- EFECTO DE GIRO (FLIP CARD) Y GRILLA PARA LAS RECETAS --- */
+.receta-card {
+    display: flex;
+    flex: 1 1 calc(25% - 15px); /* Distribuye las 4 tarjetas en la fila */
+    min-width: 250px;
+    height: 280px;               /* Altura fija para que todas midan igual */
+    background-color: transparent;
+    perspective: 1000px;         /* Espacio 3D para el efecto de giro */
+    box-shadow: none;
+    overflow: visible;           /* Permite que el giro 3D  */
+}
+
+.receta-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    background-color: #ffffff;
+}
+
+/* Giro al pasar el mouse */
+.receta-card:hover .receta-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera */
+.receta-card-front,
+.receta-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Frente de la tarjeta */
+.receta-card-front {
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+/* Dorso de la tarjeta (Información de la receta) */
+.receta-card-back {
+    background-color: #fff9f3;
+    color: #293a36;
+    transform: rotateY(180deg);
+    padding: 20px;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.receta-card-back h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #e7797d;
+}
+
+.receta-card-back p {
+    margin: 6px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #4a5753;
 }
 
 .receta-imagen {

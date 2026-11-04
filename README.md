@@ -20,11 +20,7 @@ CSS
 
 JavaScript
 
-Cómo ver el proyecto
-
-Se puede descargar el repositorio y abrir el archivo index.html en el navegador para recorrer el sitio.
-
-Autor
+Autores
 
 Juan Cruz Gagliano
 Matias Varela

@@ -24,17 +24,17 @@ Tecnologías utilizadas
 Estructura del proyecto
 
 web1/
-├── index.html
-├── etapas.html
-├── contacto.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── carrusel.js
-│   ├── contacto.js
-│   └── menu.js
-├── img/
-└── README.md
+- index.html
+- etapas.html
+- contacto.html
+- css/
+    - style.css
+- js/
+    - carrusel.js
+    - contacto.js
+    - menu.js
+- img/
+- README.md
 
 
 Instrucciones de uso

@@ -376,8 +376,9 @@ img.linea-con-corazon {
 /* PORTADA DE LA PAGINA DE ETAPAS */
 .hero-etapas {
     position: relative;
-    height: 680px;
+    height: 520px;
     overflow: hidden;
+    background-color: #fff9f3;
 }
 
 .hero-etapas > img {
@@ -388,6 +389,7 @@ img.linea-con-corazon {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 35%;
 }
 
 .hero-etapas::after {
@@ -406,8 +408,8 @@ img.linea-con-corazon {
 .hero-etapas-content {
     position: relative;
     z-index: 2;
-    width: 33%;
-    padding: 150px 50px 75px 175px;
+    width: 55%;
+    padding: 70px 50px 75px 125px;
 }
 
 .hero-etapas-subtitulo {
@@ -502,7 +504,7 @@ img.linea-con-corazon {
 }
 
 .pink-card {
-    background-color: #fae1e2;
+    background-color: #fce1e2;
 }
 
 .yellow-card {
@@ -540,21 +542,25 @@ img.linea-con-corazon {
     line-height: 1.4;
 }
 
+
 .etapa-imagen {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 140px;
+    height: 160px;
     margin-bottom: 16px;
+    background-color: inherit;
 }
 
 .etapa-imagen img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 12px;
     object-fit: contain;
+    border-radius: 0;
+    mix-blend-mode: multiply;
 }
+
 
 .etapa-btn {
     display: flex;
@@ -1050,17 +1056,17 @@ img.linea-con-corazon {
 
     .etapas-section,
     .recetas-section {
-        padding: 40px 20px;
+        padding: 30px 16px;
     }
 
     .etapas-grid,
     .recetas-grid {
-        justify-content: center;
+        flex-direction: column;
     }
 
     .etapa-card,
     .receta-card {
-        flex: 1 1 100%;
+        width: 100%;
     }
 
     .contacto-container {

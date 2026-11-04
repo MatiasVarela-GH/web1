@@ -88,6 +88,25 @@ header nav img {
     display: block;
 }
 
+/* BOTON MENU HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background-color: #293a36;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 /* PORTADA DE INICIO */
 .hero {
     position: relative;
@@ -95,7 +114,7 @@ header nav img {
     overflow: hidden;
 }
 
-.hero > img {
+.hero>img {
     position: absolute;
     top: 0;
     left: 0;
@@ -250,7 +269,9 @@ header nav img {
 }
 
 @keyframes flotar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -278,7 +299,7 @@ img.linea-con-corazon {
 
 }
 
-.hero-middle-list{
+.hero-middle-list {
     text-align: left;
     display: flex;
     justify-content: space-between;
@@ -345,29 +366,29 @@ img.linea-con-corazon {
 
 /* PEQUENOS SABORES */
 
-.seccion-info{
+.seccion-info {
     text-align: center;
     padding: 50px 8%;
 }
 
-.contenedor-info{
+.contenedor-info {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
 }
 
-.ilus-info img{
-   width: 100%;
-   max-width: 450px;
-   height: auto;
+.ilus-info img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
 }
 
-.ilus-info{
+.ilus-info {
     width: 420px;
 }
 
-.info{
+.info {
     text-align: left;
     width: 500px;
     max-width: 500px;
@@ -381,7 +402,7 @@ img.linea-con-corazon {
     background-color: #fff9f3;
 }
 
-.hero-etapas > img {
+.hero-etapas>img {
     position: absolute;
     top: 0;
     left: 0;
@@ -693,7 +714,7 @@ img.linea-con-corazon {
     background-color: #f7f3ed;
 }
 
-.receta-imagen > img {
+.receta-imagen>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1002,58 +1023,244 @@ img.linea-con-corazon {
     background-color: #ca6267;
 }
 
-/* AJUSTES PARA PANTALLAS MAS PEQUENAS */
-@media (max-width: 1024px) {
-    .etapa-card,
-    .receta-card {
-        flex: 1 1 calc(50% - 10px);
-    }
-}
+/* AJUSTES RESPONSIVE: escritorio y celulares */
 
-@media (max-width: 900px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .footer-brand {
-        flex-direction: column;
-    }
 
-    .footer-slogan {
-        justify-content: center;
-    }
-}
-
+/* CELULARES: hasta 768px */
 @media (max-width: 768px) {
+    /* Encabezado y menu hamburguesa */
     header {
-        flex-wrap: wrap;
+        position: relative;
+        flex-direction: column;
         justify-content: center;
+        gap: 12px;
+        padding: 14px 60px 14px 20px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 20;
     }
 
     header nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 15;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 16px 20px 20px;
+        background-color: #fff9f3;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
     }
 
-    .hero-content,
+    header nav.open {
+        display: flex;
+    }
+
+    header nav a {
+        padding: 10px 12px;
+        text-align: center;
+    }
+
+    header nav a.active {
+        padding: 10px 12px;
+    }
+
+    header nav img {
+        display: none;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .etiqueta {
+        align-self: center;
+    }
+
+    /* Hero de inicio */
+    .hero {
+        height: auto;
+        min-height: 590px;
+    }
+
+    .hero > img {
+        object-position: 67% center;
+    }
+
+    .hero::after {
+        background: linear-gradient(
+            to right,
+            rgba(255, 249, 243, 0.98) 0%,
+            rgba(255, 249, 243, 0.91) 42%,
+            rgba(255, 249, 243, 0.45) 72%,
+            rgba(255, 249, 243, 0.08) 100%
+        );
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 620px;
+        padding: 58px 56px 88px 28px;
+    }
+
+    .hero-subtitulo {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        max-width: 430px;
+        margin-top: 22px;
+        margin-bottom: 18px;
+        font-size: clamp(30px, 6vw, 38px);
+        line-height: 1.16;
+    }
+
+    .hero-content p {
+        max-width: 430px;
+        font-size: 15px;
+    }
+
+    .hero .prev,
+    .hero .next {
+        top: auto;
+        bottom: 14px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero .prev {
+        left: 12px;
+    }
+
+    .hero .next {
+        right: 12px;
+    }
+
+    .hero .prev img,
+    .hero .next img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .dots {
+        bottom: 25px;
+    }
+
+    .decoracion img {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Beneficios: dos columnas sin desbordamiento */
+    .hero-middle-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
+        padding: 28px 24px;
+    }
+
+    .hero-middle-item {
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .hero-middle-text {
+        min-width: 0;
+    }
+
+    /* Seccion informativa */
+    .seccion-info {
+        padding: 42px 24px;
+    }
+
+    .contenedor-info {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .ilus-info {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .ilus-info img {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .info {
+        width: 100%;
+        max-width: 560px;
+        text-align: center;
+    }
+
+    /* Hero de etapas */
+    .hero-etapas {
+        height: auto;
+        min-height: 570px;
+    }
+
+    .hero-etapas > img {
+        object-position: 65% center;
+    }
+
+    .hero-etapas::after {
+        background: linear-gradient(
+            to right,
+            rgba(255, 249, 243, 0.97) 0%,
+            rgba(255, 249, 243, 0.88) 45%,
+            rgba(255, 249, 243, 0.35) 100%
+        );
+    }
+
     .hero-etapas-content {
         width: 100%;
-        padding: 60px 32px;
+        max-width: 600px;
+        padding: 100px 30px 100px;
     }
 
-    .hero h1,
     .hero-etapas h1 {
-        font-size: 36px;
+        max-width: 440px;
+        font-size: clamp(32px, 6vw, 40px);
     }
 
-    .hero-middle {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px 24px;
-        gap: 20px;
+    .hero-etapas-content p {
+        max-width: 430px;
     }
 
+    .etiqueta-etapas {
+        top: auto;
+        right: 24px;
+        bottom: 35px;
+        width: 115px;
+        height: 90px;
+        font-size: 15px;
+    }
+
+    /* Etapas y recetas */
     .etapas-section,
     .recetas-section {
         padding: 30px 16px;
@@ -1070,31 +1277,198 @@ img.linea-con-corazon {
     }
 
     .contacto-container {
-        padding: 24px;
+        padding: 30px 24px;
     }
 
     .contacto-header h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .btn-enviar {
         width: 100%;
         text-align: center;
     }
-}
 
-@media (max-width: 600px) {
-    .footer-brand-text p {
-        white-space: normal;
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .footer-nav {
-        flex-wrap: wrap;
+    .footer-brand {
+        flex-direction: column;
+    }
+
+    .footer-slogan {
         justify-content: center;
     }
 
-    .recetas-header-container {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+
+    /* Ajustes para celulares angostos */
+    .hero {
+            min-height: 570px;
+        }
+
+        .hero-content {
+            padding: 52px 48px 82px 22px;
+        }
+
+        .hero h1 {
+            max-width: 340px;
+            font-size: clamp(29px, 8vw, 34px);
+
+        }
+
+        .hero-content p {
+            max-width: 340px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .hero .prev,
+        .hero .next {
+            bottom: 12px;
+        }
+
+        .dots {
+            bottom: 23px;
+        }
+
+        .hero-middle-list {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 26px 22px;
+        }
+
+        .hero-middle-item {
+            max-width: 420px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .seccion-info {
+            padding: 36px 22px;
+        }
+
+        .contenedor-info {
+            gap: 18px;
+        }
+
+        .ilus-info img {
+            max-width: 230px;
+        }
+
+        .hero-etapas {
+            min-height: 540px;
+        }
+
+        .hero-etapas-content {
+            padding: 72px 22px 125px;
+        }
+
+        .hero-etapas h1 {
+            font-size: 32px;
+        }
+
+        .etiqueta-etapas {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .etapas-section,
+        .recetas-section {
+            padding: 38px 18px;
+        }
+
+        .etapas-header h2 {
+            font-size: 28px;
+        }
+
+        .etapa-card,
+        .receta-card {
+            flex: 1 1 100%;
+            width: 100%;
+        }
+
+        .recetas-header-container {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .recetas-titulo-wrapper {
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .recetas-header-container h2 {
+            font-size: 25px;
+        }
+
+        .receta-info {
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            font-size: 11px;
+        }
+
+        .contacto-section {
+            margin: 22px auto;
+            padding: 0 14px;
+        }
+
+        .contacto-container {
+            padding: 26px 20px;
+            border-radius: 20px;
+        }
+
+        .contacto-header {
+            margin-bottom: 28px;
+        }
+
+        .contacto-header h1 {
+            font-size: 25px;
+        }
+
+        .contacto-header p {
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 13px 14px;
+        }
+
+        .footer-container {
+            gap: 22px;
+        }
+
+        .footer-brand-text p {
+            white-space: normal;
+        }
+
+        .footer-nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .site-footer {
+            padding: 28px 20px 38px;
+        }
+
+    .hero-content {
+            padding-right: 40px;
+            padding-left: 18px;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+        }
+
+        .hero-middle-list {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        .contacto-container {
+            padding: 22px 16px;
+        }
 }

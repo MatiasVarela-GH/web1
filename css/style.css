@@ -431,8 +431,18 @@ img.linea-con-corazon {
     padding: 150px 50px 75px 175px;
 }
 
+.hero-etapas h1,
+.hero-etapas h1 {
+    max-width: 100%;
+    margin-bottom: 24px;
+    color: #293a36;
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
 .hero-etapas-subtitulo {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -462,11 +472,18 @@ img.linea-con-corazon {
     transform: scale(1.05);
 }
 
+.hero-etapas h1 #hero-tituloDestacado {
+    color: #e7797d;
+}
+
+
 /* TARJETAS DE ETAPAS */
 .etapas-section {
+    width: 100%;
     max-width: 1200px;
+    box-sizing: border-box;
     margin: 0 auto;
-    padding: 60px 24px;
+    padding: 60px 0;
     background-color: #fff9f3;
 }
 
@@ -494,30 +511,32 @@ img.linea-con-corazon {
     font-size: 15px;
 }
 
+/* DISTRIBUCION CON FLEXBOX */
 .etapas-grid {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
 }
 
 .etapa-card {
-    position: relative;
     display: flex;
-    flex: 1;
     flex-direction: column;
-    min-width: 240px;
-    padding: 24px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    flex: 1 1 calc(50% - 12px);
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 24px;
+    box-shadow: 0 4px 14px rgba(41, 58, 54, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .etapa-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(41, 58, 54, 0.08);
 }
 
+/* COLORES */
 .green-card {
     background-color: #e5f0e3;
 }
@@ -534,85 +553,85 @@ img.linea-con-corazon {
     background-color: #e3edf4;
 }
 
-.etapa-badge {
-    align-self: flex-start;
-    margin-bottom: 14px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    color: #293a36;
-    font-family: Nunito, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-}
-
+/* TITULOS Y DESCRIPCIONES */
 .etapa-card h3 {
-    margin: 0 0 8px;
+    margin: 24px 24px 8px;
     color: #293a36;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 800;
+    line-height: 1.3;
 }
 
 .etapa-card p {
-    flex-grow: 1;
-    margin: 0 0 20px;
+    margin: 0 24px 20px;
     color: #4a5753;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-.etapa-imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 140px;
-    margin-bottom: 16px;
-}
-
-.etapa-imagen img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 12px;
-    object-fit: contain;
-}
-
-.etapa-btn {
-    display: flex;
-    align-self: flex-start;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
     font-size: 16px;
-    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* IMAGENES */
+.etapa-imagen {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.etapa-imagen > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.etapa-card:hover .etapa-imagen > img {
+    transform: scale(1.03);
+}
+
+/* BOTONES SOBRE LAS IMAGENES */
+.etapa-btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etapa-btn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .etapa-btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
 }
 
+/* COLORES DE LOS BOTONES */
 .green-btn {
-    background-color: #588157;
-    color: #ffffff;
+    background-color: #58815783;
 }
 
 .pink-btn {
-    background-color: #e7797d;
-    color: #ffffff;
+    background-color: #e7797d81;
 }
 
 .yellow-btn {
-    background-color: #dda15e;
-    color: #ffffff;
+    background-color: #e397137c;
 }
 
 .blue-btn {
-    background-color: #457b9d;
-    color: #ffffff;
+    background-color: #457b9d7e;
 }
 
 /* RECETAS */
@@ -917,7 +936,7 @@ img.linea-con-corazon {
 }
 
 .contacto-container {
-    padding: 48px;
+    padding: 30px;
     border-radius: 24px;
     background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -956,7 +975,7 @@ img.linea-con-corazon {
 .contacto-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
 .form-group {
@@ -998,7 +1017,7 @@ img.linea-con-corazon {
 }
 
 .btn-enviar {
-    align-self: flex-start;
+    align-self: center;
     margin-top: 10px;
     padding: 14px 32px;
     border: none;
@@ -1017,11 +1036,7 @@ img.linea-con-corazon {
     background-color: #ca6267;
 }
 
-/* AJUSTES RESPONSIVE: escritorio y celulares */
-
-
-
-/* CELULARES: hasta 768px */
+/* CELULARES*/
 @media (max-width: 768px) {
     /* Encabezado y menu hamburguesa */
     header {
@@ -1255,46 +1270,46 @@ img.linea-con-corazon {
     }
 
     /* Etapas y recetas */
-    .etapas-section,
-    .recetas-section {
-        padding: 44px 22px;
-    }
+.etapas-section,
+.recetas-section {
+    padding: 44px 22px;
+}
 
-    .etapas-grid,
-    .recetas-grid {
-        justify-content: center;
-        gap: 18px;
-    }
+.etapas-grid,
+.recetas-grid {
+    justify-content: center;
+    gap: 18px;
+}
 
-    .etapa-card,
-    .receta-card {
-        flex: 1 1 calc(50% - 10px);
-        min-width: 0;
-    }
+/* Etapas */
+.etapa-card {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 0;
+}
 
-    .recetas-header-container {
-        align-items: flex-start;
-    }
+/* Recetas */
+.receta-card {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 0;
+}
 
-    /* Contacto */
-    .contacto-section {
-        margin: 28px auto;
-        padding: 0 18px;
-    }
+.etapa-card h3 {
+    font-size: 22px;
+}
 
-    .contacto-container {
-        padding: 30px 24px;
-    }
+.etapa-imagen {
+    height: 200px;
+}
 
-    .contacto-header h1 {
-        font-size: 28px;
-    }
+.etapa-btn {
+    width: 44px;
+    height: 44px;
+}
 
-    .btn-enviar {
-        width: 100%;
-        text-align: center;
-    }
-
+.etapa-btn img {
+    width: 22px;
+    height: 22px;
+}
     /* Footer */
     .footer-container {
         flex-direction: column;
@@ -1322,7 +1337,6 @@ img.linea-con-corazon {
         .hero h1 {
             max-width: 340px;
             font-size: clamp(29px, 8vw, 34px);
-
         }
 
         .hero-content p {

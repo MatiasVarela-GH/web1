@@ -48,9 +48,10 @@
     <section class="hero-etapas">
         <img src="img/bebe-feliz-verduras.png" alt="hero-bebe">
         <div class="hero-etapas-content">
-            <span class="hero-etapas-subtitulo">UNA ETAPA PARA CADA DESCRUBRIMIENTO</span>
-            <h1>Cada etapa,
-                <span>un nuevo sabor</span>
+            <span class="hero-subtitulo" id="hero-subtitulo">UNA GUIA PARA CADA ETAPA</span>
+            <h1>
+                <span id="hero-tituloInicio">Cada etapa</span>
+                <span id="hero-tituloDestacado">un nuevo sabor</span>
             </h1>
             <p>Conoce que alimentos, texturas y preparaciones son adecuadas en cada etapa de su crecimiento, con
                 informacion confiable, tips practicos y recetas simples.</p>
@@ -64,60 +65,60 @@
     </section>
 
 
-    <!--seccion Explorando Etapas-->
+    <!-- Tarjetas-->
     <section class="etapas-section">
-        <div class="etapas-header">
-            <img src="img/hoja-etiqueta.svg" alt="Icono decorativo" class="etapas-titulo-icono">
-            <h2>Explorá las etapas</h2>
-            <p>Cada etapa trae nuevos sabores, texturas y descubrimientos.</p>
-        </div>
-
         <div class="etapas-grid">
+
             <!-- Tarjeta 1: 6 meses -->
             <article class="etapa-card green-card">
-                <span class="etapa-badge">6 meses</span>
                 <h3>Primeros alimentos</h3>
                 <p>Texturas suaves y sabores simples para comenzar.</p>
                 <div class="etapa-imagen">
-                    <img src="img/pure-de-palta.png" alt="Primeros alimentos 6 meses">
+                    <img src="img/etapa-6m.png" alt="Primeros alimentos 6 meses">
+                    <a href="etapas.html" class="etapa-btn green-btn" aria-label="Ver primeros alimentos">
+                        <img src="img/flecha-simple-derecha.svg" alt="">
+                    </a>
                 </div>
-                <a href="etapas.html" class="etapa-btn green-btn">→</a>
             </article>
 
             <!-- Tarjeta 2: 7-8 meses -->
             <article class="etapa-card pink-card">
-                <span class="etapa-badge">7-8 meses</span>
                 <h3>Nuevas texturas</h3>
                 <p>Más variedad de verduras, frutas y combinaciones.</p>
                 <div class="etapa-imagen">
                     <img src="img/etapa-7-8m.png" alt="Nuevas texturas 7-8 meses">
+                    <a href="etapas.html" class="etapa-btn pink-btn" aria-label="Ver nuevas texturas">
+                        <img src="img/flecha-simple-derecha.svg" alt="">
+                    </a>
                 </div>
-                <a href="etapas.html" class="etapa-btn pink-btn">→</a>
             </article>
 
             <!-- Tarjeta 3: 9-11 meses -->
             <article class="etapa-card yellow-card">
-                <span class="etapa-badge">9-11 meses</span>
                 <h3>Más variedad</h3>
                 <p>Incorporamos legumbres, cereales y nuevas texturas.</p>
                 <div class="etapa-imagen">
                     <img src="img/etapa-9-11m.png" alt="Más variedad 9-11 meses">
+                    <a href="etapas.html" class="etapa-btn yellow-btn" aria-label="Ver más variedad">
+                        <img src="img/flecha-simple-derecha.svg" alt="">
+                    </a>
                 </div>
-                <a href="etapas.html" class="etapa-btn yellow-btn">→</a>
             </article>
 
-            <!-- Tarjeta 4: 12 meses + -->
+            <!-- Tarjeta 4: 12 meses en adelante -->
             <article class="etapa-card blue-card">
-                <span class="etapa-badge">12 meses +</span>
                 <h3>Alimentación familiar</h3>
                 <p>Comidas más variadas y adaptadas a la familia.</p>
                 <div class="etapa-imagen">
-                    <img src="img/etapa-12m.png" alt="Alimentación familiar 12 meses">
+                    <img src="img/etapa-12m.png" alt="Alimentación familiar desde los 12 meses">
+                    <a href="etapas.html" class="etapa-btn blue-btn" aria-label="Ver alimentación familiar">
+                        <img src="img/flecha-simple-derecha.svg" alt="">
+                    </a>
                 </div>
-                <a href="etapas.html" class="etapa-btn blue-btn">→</a>
             </article>
         </div>
     </section>
+
     <!-- SECCION RECETAS DESTACADAS -->
     <section class="recetas-section">
         <div class="recetas-header-container">
@@ -137,7 +138,7 @@
                 <div class="receta-imagen">
                     <img src="img/receta-zanahoria.png" alt="Puré de zanahoria">
                     <button class="receta-fav" aria-label="Marcar como favorito">
-                        <img src="img/icono-corazon.svg" alt="Favorito">
+                        <img src="img/icono-corazon.png" alt="Favorito">
                     </button>
                 </div>
                 <div class="receta-content">
@@ -155,7 +156,7 @@
                 <div class="receta-imagen">
                     <img src="img/receta-palta.png" alt="Puré de palta">
                     <button class="receta-fav" aria-label="Marcar como favorito">
-                        <img src="img/icono-corazon.svg" alt="Favorito">
+                        <img src="img/icono-corazon.png" alt="Favorito">
                     </button>
                 </div>
                 <div class="receta-content">
@@ -171,9 +172,9 @@
             <!-- Receta 3: Panqueques de banana -->
             <article class="receta-card">
                 <div class="receta-imagen">
-                    <img src="img/receta-panqueques.png" alt="Panqueques de banana">
+                    <img src="img/receta-panqueques.jpg" alt="Panqueques de banana">
                     <button class="receta-fav" aria-label="Marcar como favorito">
-                        <img src="img/icono-corazon.svg" alt="Favorito">
+                        <img src="img/icono-corazon.png" alt="Favorito">
                     </button>
                 </div>
                 <div class="receta-content">
@@ -191,7 +192,7 @@
                 <div class="receta-imagen">
                     <img src="img/receta-albondigas.png" alt="Albóndigas de pollo y verduras">
                     <button class="receta-fav" aria-label="Marcar como favorito">
-                        <img src="img/icono-corazon.svg" alt="Favorito">
+                        <img src="img/icono-corazon.png" alt="Favorito">
                     </button>
                 </div>
                 <div class="receta-content">
